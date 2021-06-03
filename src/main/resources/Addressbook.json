@@ -1,0 +1,26 @@
+{
+  "contact": [
+    {
+      "id": 1,
+      "firstname": "Akash",
+      "lastname": "Shevgan",
+      "address": "gangapur",
+      "city": "Aurangabad",
+      "state": "maharashtra",
+      "zip": 423701,
+      "phonenumber": 8793447817,
+      "email": "akashshevgan11@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstname": "Sachin",
+      "lastname": "Rajput",
+      "address": "gangapur",
+      "city": "Aurangabad",
+      "state": "maharashtra",
+      "zip": 423701,
+      "phonenumber": 9011653077,
+      "email": "sachinr@gmail.com"
+    }
+  ]
+}
