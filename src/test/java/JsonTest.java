@@ -1,6 +1,7 @@
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,6 +24,23 @@ public class JsonTest {
         Data[] contactData = getEmployeeDetails();
         RestAPI contactRestAPI = new RestAPI(Arrays.asList(contactData));
         long entries = contactRestAPI.countEntries();
-        Assertions.assertEquals(2, entries);
+        Assertions.assertEquals(6, entries);
+    }
+
+    public Response addContactstoJSONServer(Data restAssuredBookData){
+        String contact = new Gson().toJson(restAssuredBookData);
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.header("Content-Type", "application/json");
+        requestSpecification.body(contact);
+        return requestSpecification.post("/contact");
+    }
+
+    @Test
+    public void whenNewContactisInsertedShouldReturnResponseCode201() {
+        Data[] contactData = getEmployeeDetails();
+        Data jsonServerBookData1 = new Data("5", "sudam", "Singh", "Eon park", "pune", "Maharashtra", "400265", "87906543", "ranas@gmail.com");
+        Response response = addContactstoJSONServer(jsonServerBookData1);
+        int statusCode = response.statusCode();
+        Assertions.assertEquals(201, statusCode);
     }
 }

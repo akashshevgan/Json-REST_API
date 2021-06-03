@@ -21,6 +21,39 @@
       "zip": 423701,
       "phonenumber": 9011653077,
       "email": "sachinr@gmail.com"
+    },
+    {
+      "id": "7",
+      "firstName": "Wanda",
+      "lastName": "Maximoff",
+      "address": "Vision House",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zip": "400265",
+      "phoneNumber": "55665556622",
+      "email": "wanda@avenger.com"
+    },
+    {
+      "id": "4",
+      "firstName": "Rana",
+      "lastName": "Singh",
+      "address": "Eon park",
+      "city": "pune",
+      "state": "Maharashtra",
+      "zip": "400265",
+      "phoneNumber": "87906543",
+      "email": "ranas@gmail.com"
+    },
+    {
+      "id": "5",
+      "firstName": "sudam",
+      "lastName": "Singh",
+      "address": "Eon park",
+      "city": "pune",
+      "state": "Maharashtra",
+      "zip": "400265",
+      "phoneNumber": "87906543",
+      "email": "ranas@gmail.com"
     }
   ]
 }
