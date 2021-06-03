@@ -43,4 +43,15 @@ public class JsonTest {
         int statusCode = response.statusCode();
         Assertions.assertEquals(201, statusCode);
     }
+
+    @Test
+    public void givenContacttoUpdateShouldReturnResponseCode200() {
+        Data[] ContactData = getEmployeeDetails();
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.header("Content-Type","application/json");
+        requestSpecification.body("{\"firstname\":\"Akash\",\"lastname\":\"Shevgan\",\"address\":\"manjri\",\"city\":\"pune\",\"state\":\"Maharashtra\",\"zip\":\"400265\",\"phonenumber\":\"789654433\",\"email\":\"akash@gmail.com\"}");
+        Response response = requestSpecification.put("/contact");
+        int statusCode = response.getStatusCode();
+        Assertions.assertEquals(201, statusCode);
+    }
 }
